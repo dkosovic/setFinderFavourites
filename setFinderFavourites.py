@@ -23,6 +23,12 @@ favorites_path = "/Users/{user}/Library/Application Support/com.apple.sharedfile
 # Args parser:
 parser = argparse.ArgumentParser()
 parser.add_argument(
+  "--user",
+  metavar="u",
+  nargs=1,
+  help="User that is having favorites modified",
+)
+parser.add_argument(
   "--add",
   metavar="a",
   nargs="+",
@@ -134,9 +140,11 @@ def set_favorites(user, add_items, remove_items):
 
 # loop through users and set favorites
 if __name__ == "__main__":
-  # if running as root, run for all users. Otherwise run for current user
+  # If user agrument specified, run only for that user, else if running as root, run for all users. Otherwise run for current user
   user = getpass.getuser()
-  if user == "root":
+  if args.user:
+    users = args.user
+  elif user == "root":
     users = get_users()
   else:
     users = [user]
