@@ -37,7 +37,9 @@ parser.add_argument(
 parser.add_argument(
   "--kill",
   metavar="k",
-  help="If should perform killall Finder and sharedfilelistd",
+  action="store_const",
+  const=True,
+  help="Performs killall Finder and sharedfilelistd",
 )
 args = parser.parse_args();
 add_items = []
