@@ -2,8 +2,8 @@
 # NOTE: Please mind the trailing slashes at the end of the path names!!!
 # Supports multiple files per attribute (pass them after a space - see `--add` example below:
 # Examples:
-# Adding:   `python setFavorites.py --add file:///Users/your_username/your/path/ file:///Users/your_username/your/another_path/`
-# Removing: `python setFavorites.py --remove file:///Users/your_username/your/path/`
+# Adding:   `python setFinderFavourites.py --add file:///Users/your_username/your/path/ file:///Users/your_username/your/another_path/`
+# Removing: `python setFinderFavourites.py --remove file:///Users/your_username/your/path/`
 
 #!/usr/bin/python
 
